@@ -1,0 +1,10 @@
+{
+    "language": "English",
+    "rules": {
+        "misc-en": {
+            "expression": "\bmisc\\.?\b",
+            "flags": "gi",
+            "reason": "misc -> cosmetic"
+        }
+    }
+}

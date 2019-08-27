@@ -1,0 +1,43 @@
+{
+    "manifest_version": 2,
+    "version": "1.0.6",
+    "name": "TF Wiki Sentry",
+    "short_name": "TFWSentry",
+    "homepage_url": "https://github.com/espacorede/tfwikisentry",
+    "author": "Espacorede Team",
+    "description": "Enhance your Team Fortress Wiki editing experience! Hopefully.",
+    "icons": {
+        "48": "images/icons/icon-48x48.png",
+        "72": "images/icons/icon-72x72.png",
+        "96": "images/icons/icon-96x96.png",
+        "128": "images/icons/icon-128x128.png"
+    },
+    "background": {
+        "scripts": [
+            "scripts/background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://wiki.teamfortress.com/*",
+                "https://dev.wiki.tf/*"
+            ],
+            "js": [
+                "scripts/wiki.js"
+            ]
+        }
+    ],
+    "options_ui": {
+        "page": "pages/options.html"
+    },
+    "permissions": [
+        "contextMenus",
+        "tabs",
+        "storage"
+    ],
+    "web_accessible_resources": [
+        "images/*.png",
+        "rules/*.json"
+    ]
+}

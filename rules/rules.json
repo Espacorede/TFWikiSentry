@@ -1,0 +1,24 @@
+{
+    "rules": {
+        "capitalized-class": {
+            "expression": "\\b(scouts?|soldiers?|pyros?|heavy weapons guys?|heavies|demom(an|en)|engineers?|medics?|snipers?|sp(y|ies))\\b",
+            "flags": "g",
+            "reason": "Class name not capitalized"
+        },
+        "legacy-image-namespace": {
+            "expression": "(^>)?\\[?\\[?image:[^.]+\\.[a-z]+",
+            "flags": "gim",
+            "reason": "Using legacy file namespace (Image: should be replaced by File:)"
+        },
+        "legacy-wikipedia": {
+            "expression": "{{w\\|.*}}",
+            "flags": "gi",
+            "reason": "Deprecated 'w' template (use [[w:article|name]] instead)"
+        },
+        "nondigit-level": {
+            "expression": "\\|\\s*level\\s*=\\s+[\\d-]?([^\\d-]+)",
+            "flags": "g",
+            "reason": "Non-digit in level parameter; use | item-kind instead"
+        }
+    }
+}

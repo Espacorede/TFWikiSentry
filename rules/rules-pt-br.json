@@ -1,0 +1,50 @@
+{
+    "language": "Brazilian Portuguese",
+    "rules": {
+        "language-links-br": {
+            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file:|media:)([^\\]|\/]+?(?!\/pt-br))(#.*)?(\\|.*?)?\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong language (missing /pt-br)"
+        },
+        "wikipedia-links-br": {
+            "expression": "\\[\\[w(ikipedia)?:(?!pt:)((.*)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing pt: after w:)"
+        },
+        "corpo-a-corpo-br": {
+            "expression": "(?:corpo-a-corpo)|(?:corpo(?:-|\\s)à(?:-|\\s)corpo)",
+            "flags": "gi",
+            "reason": "corpo a corpo escrito errado"
+        },
+        "classes-br": {
+            "expression": "escoteiro|soldado|engenheiro|espião",
+            "flags": "gi",
+            "reason": "nome de classe traduzido"
+        },
+        "misc-br": {
+            "expression": "\bmisc(?:\\.|el[aâ]neo)?s?\b",
+            "flags": "gi",
+            "reason": "miscelâneo -> cosmético"
+        },
+        "workshop-br": {
+            "expression": "contribu[íi]d[oa]s?]? (?:a|para a) (\\[\\[Steam Workshop\/pt-br\\|)?Oficina",
+            "flags": "gi",
+            "reason": "O correto é 'contribuído à Oficina'"
+        },
+        "team-br": {
+            "expression": "\btime\b",
+            "flags": "gi",
+            "reason": "O correto é 'equipe' no lugar de time"
+        },
+        "drop-br": {
+            "expression": "\b(?:drop[aá]vel|sistema de drops)\b",
+            "flags": "gi",
+            "reason": "O correto é 'sistema de obtenção de itens'"
+        },
+        "steam-br": {
+            "expression": "\b(?:pr|[dn])?a (\\[\\[Steam\/pt-br\\|)?Steam\b",
+            "flags": "gi",
+            "reason": "Steam é masculino (a Steam -> o Steam)"
+        }
+    }
+}

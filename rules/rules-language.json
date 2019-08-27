@@ -1,0 +1,9 @@
+{
+    "rules": {
+        "en-sound": {
+            "expression": "{{(?:quotation)(?=.*\\|sound=.+)(?!.*\\|en-sound=yes).*}}",
+            "flags": "gi",
+            "reason": "Missing |en-sound=yes in quotation template with sound"
+        }
+    }
+}
