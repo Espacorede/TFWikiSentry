@@ -8,7 +8,7 @@ Trying to make contributing to the Team Fortress Wiki a little better.
 
 ### Firefox
 
-TF Wiki Sentry is available to download and install from the Firefox Add-ons site: [TFWikiSentry](https://addons.mozilla.org/pt-BR/firefox/addon/tfwikisentry/).
+TF Wiki Sentry is available to download and install from the Firefox Add-ons site: [TFWikiSentry](https://addons.mozilla.org/pt-BR/firefox/addon/tf-wiki-sentry/).
 
 ### Google Chrome
 
