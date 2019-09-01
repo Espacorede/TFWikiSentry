@@ -42,8 +42,8 @@
             "reason": "O correto é 'sistema de obtenção de itens'"
         },
         "steam-br": {
-            "expression": "\b(?:pr|[dn])?a (\\[\\[Steam\/pt-br\\|)?Steam\b",
-            "flags": "gi",
+            "expression": "(^| )(à|(pr|[dn])?a) (\\[\\[Steam\/pt-br\\|)?Steam",
+            "flags": "gim",
             "reason": "Steam é masculino (a Steam -> o Steam)"
         }
     }

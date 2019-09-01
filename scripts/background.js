@@ -130,8 +130,11 @@ function executeExpressions(text, lang) {
             warnings.push(...executeExpression(expression, text));
         }
     }
-    for (const expression of languageExpressions[lang]) {
-        warnings.push(...executeExpression(expression, text));
+    const languageSpecific = languageExpressions[lang];
+    if (languageSpecific) {
+        for (const expression of languageSpecific) {
+            warnings.push(...executeExpression(expression, text));
+        }
     }
 
     warnings.sort((a, b) => {
