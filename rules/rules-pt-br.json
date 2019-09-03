@@ -22,22 +22,17 @@
             "reason": "nome de classe traduzido"
         },
         "misc-br": {
-            "expression": "\bmisc(?:\\.|el[aâ]neo)?s?\b",
+            "expression": "(?:ite(?:m|ns) )?misc(?:s?\\.|el[aâ]neos?)",
             "flags": "gi",
             "reason": "miscelâneo -> cosmético"
         },
         "workshop-br": {
-            "expression": "contribu[íi]d[oa]s?]? (?:a|para a) (\\[\\[Steam Workshop\/pt-br\\|)?Oficina",
+            "expression": "contribu[íi]d[oa]s?]? (?:(?:n|pel)?a|pa?ra(?: a)?) (\\[\\[Steam Workshop\/pt-br\\|)?Oficina",
             "flags": "gi",
             "reason": "O correto é 'contribuído à Oficina'"
         },
-        "team-br": {
-            "expression": "\btime\b",
-            "flags": "gi",
-            "reason": "O correto é 'equipe' no lugar de time"
-        },
         "drop-br": {
-            "expression": "\b(?:drop[aá]vel|sistema de drops)\b",
+            "expression": "(?:drop[aá]vel|sistema de drops|obtenível)",
             "flags": "gi",
             "reason": "O correto é 'sistema de obtenção de itens'"
         },

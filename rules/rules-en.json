@@ -2,9 +2,9 @@
     "language": "English",
     "rules": {
         "misc-en": {
-            "expression": "\bmisc\\.?\b",
+            "expression": "misc\\.",
             "flags": "gi",
-            "reason": "misc -> cosmetic"
+            "reason": "misc. -> cosmetic"
         }
     }
 }
