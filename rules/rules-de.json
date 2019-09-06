@@ -1,0 +1,15 @@
+{
+    "language": "German",
+    "rules": {
+        "language-links-de": {
+            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/de))(#.*)?(\\|.*?)?\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong language (missing /de)"
+        },
+        "wikipedia-links-de": {
+            "expression": "\\[\\[w(ikipedia)?:(?!de:)((.*)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing de: after w:)"
+        }
+    }
+}

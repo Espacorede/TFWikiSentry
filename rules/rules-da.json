@@ -1,0 +1,15 @@
+{
+    "language": "Danish",
+    "rules": {
+        "language-links-da": {
+            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/da))(#.*)?(\\|.*?)?\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong language (missing /da)"
+        },
+        "wikipedia-links-da": {
+            "expression": "\\[\\[w(ikipedia)?:(?!da:)((.*)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing da: after w:)"
+        }
+    }
+}

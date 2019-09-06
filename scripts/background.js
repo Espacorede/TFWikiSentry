@@ -1,6 +1,11 @@
 let expressions, languageExpressions, menus, options, translationExpressions;
 
-const languages = ["en", "pt-br", "nl"];
+const languages = ["en", "ar", "cs", "da", 
+    "de", "es", "fi", "fr", 
+    "hu", "it", "ja", "ko",
+    "nl", "no", "pl", "pt", 
+    "pt-br","ro", "ru", "tr", 
+    "zh-hans", "zh-hant" ];
 
 if (chrome) {
     browser = chrome;

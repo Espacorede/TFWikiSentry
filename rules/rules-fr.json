@@ -1,0 +1,15 @@
+{
+    "language": "French",
+    "rules": {
+        "language-links-fr": {
+            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/fr))(#.*)?(\\|.*?)?\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong language (missing /fr)"
+        },
+        "wikipedia-links-fr": {
+            "expression": "\\[\\[w(ikipedia)?:(?!fr:)((.*)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing fr: after w:)"
+        }
+    }
+}

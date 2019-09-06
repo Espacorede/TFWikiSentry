@@ -2,7 +2,12 @@ if (chrome) {
     browser = chrome;
 }
 
-const languages = ["pt-br", "nl"];
+const languages = ["ar", "cs", "da", "de", 
+    "es", "fi", "fr", "hu",
+    "it", "ja", "ko", "nl", 
+    "no", "pl", "pt", "pt-br",
+    "ro", "ru", "tr", "zh-hans",
+    "zh-hant" ];
 
 let selectedLanguage;
 

@@ -1,0 +1,15 @@
+{
+    "language": "Norwegian",
+    "rules": {
+        "language-links-no": {
+            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/no))(#.*)?(\\|.*?)?\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong language (missing /no)"
+        },
+        "wikipedia-links-no": {
+            "expression": "\\[\\[w(ikipedia)?:(?!no:)((.*)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing no: after w:)"
+        }
+    }
+}

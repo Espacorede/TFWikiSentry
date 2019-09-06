@@ -1,0 +1,15 @@
+{
+    "language": "Spanish",
+    "rules": {
+        "language-links-es": {
+            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/es))(#.*)?(\\|.*?)?\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong language (missing /es)"
+        },
+        "wikipedia-links-es": {
+            "expression": "\\[\\[w(ikipedia)?:(?!es:)((.*)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing es: after w:)"
+        }
+    }
+}

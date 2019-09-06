@@ -1,0 +1,15 @@
+{
+    "language": "Portuguese",
+    "rules": {
+        "language-links-pt": {
+            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/pt))(#.*)?(\\|.*?)?\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong language (missing /pt)"
+        },
+        "wikipedia-links-pt": {
+            "expression": "\\[\\[w(ikipedia)?:(?!pt:)((.*)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing pt: after w:)"
+        }
+    }
+}

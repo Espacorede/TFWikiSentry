@@ -2,7 +2,7 @@
     "language": "Brazilian Portuguese",
     "rules": {
         "language-links-br": {
-            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file:|media:)([^\\]|\/]+?(?!\/pt-br))(#.*)?(\\|.*?)?\\]\\]",
+            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/pt-br))(#.*)?(\\|.*?)?\\]\\]",
             "flags": "gi",
             "reason": "Link to wrong language (missing /pt-br)"
         },
@@ -30,11 +30,6 @@
             "expression": "contribu[íi]d[oa]s?]? (?:(?:n|pel)?a|pa?ra(?: a)?) (\\[\\[Steam Workshop\/pt-br\\|)?Oficina",
             "flags": "gi",
             "reason": "O correto é 'contribuído à Oficina'"
-        },
-        "drop-br": {
-            "expression": "(?:drop[aá]vel|sistema de drops|obtenível)",
-            "flags": "gi",
-            "reason": "O correto é 'sistema de obtenção de itens'"
         },
         "steam-br": {
             "expression": "(^| )(à|(pr|[dn])?a) (\\[\\[Steam\/pt-br\\|)?Steam",

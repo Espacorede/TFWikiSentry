@@ -14,11 +14,6 @@
             "expression": "{{w\\|.*}}",
             "flags": "gi",
             "reason": "Deprecated 'w' template (use [[w:article|name]] instead)"
-        },
-        "nondigit-level": {
-            "expression": "\\|\\s*level\\s*=\\s+([^\\d-]+?)([\\d-]*?)$",
-            "flags": "gm",
-            "reason": "Non-digit in level parameter; use | item-kind instead"
         }
     }
 }
