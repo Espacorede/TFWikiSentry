@@ -1,0 +1,23 @@
+name: Submit to AMO
+
+on:
+  push:
+    branches:   
+      - master
+
+jobs:
+  amo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - name: Install web-ext
+        run: | 
+         npm install web-ext --global
+      - name: Submit to AMO
+        run: |
+          web-ext sign --api-key=${{ secrets.AMO_API }} --api-secret=${{ secrets.AMO_SECRET }} --id=${{ secrets.AMO_ID }} --channel=unlisted --ignore-files manifest_chrome.json README.md
+      
