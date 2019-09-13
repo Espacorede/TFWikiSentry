@@ -2,7 +2,7 @@
     "language": "Czech",
     "rules": {
         "language-links-cs": {
-            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/cs))(#.*)?(\\|.*?)?\\]\\]",
+            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!cs).+]]|]]|#)",
             "flags": "gi",
             "reason": "Link to wrong language (missing /cs)"
         },

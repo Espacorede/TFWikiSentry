@@ -2,7 +2,7 @@
     "language": "Russian",
     "rules": {
         "language-links-ru": {
-            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/ru))(#.*)?(\\|.*?)?\\]\\]",
+            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!ru).+]]|]]|#)",
             "flags": "gi",
             "reason": "Link to wrong language (missing /ru)"
         },

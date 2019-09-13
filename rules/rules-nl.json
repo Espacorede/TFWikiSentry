@@ -2,7 +2,7 @@
     "language": "Dutch",
     "rules": {
         "language-links-nl": {
-            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/nl))(#.*)?(\\|.*?)?\\]\\]",
+            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!nl).+]]|]]|#)",
             "flags": "gi",
             "reason": "Link to wrong language (missing /nl)"
         },

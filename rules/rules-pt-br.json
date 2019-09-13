@@ -2,7 +2,7 @@
     "language": "Brazilian Portuguese",
     "rules": {
         "language-links-br": {
-            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/pt-br))(#.*)?(\\|.*?)?\\]\\]",
+            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!pt-br).+]]|]]|#)",
             "flags": "gi",
             "reason": "Link to wrong language (missing /pt-br)"
         },

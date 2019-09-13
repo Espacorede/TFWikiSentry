@@ -2,7 +2,7 @@
     "language": "Hungarian",
     "rules": {
         "language-links-hu": {
-            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/hu))(#.*)?(\\|.*?)?\\]\\]",
+            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!hu).+]]|]]|#)",
             "flags": "gi",
             "reason": "Link to wrong language (missing /hu)"
         },

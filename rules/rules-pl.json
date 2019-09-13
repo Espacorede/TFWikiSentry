@@ -2,7 +2,7 @@
     "language": "Polish",
     "rules": {
         "language-links-pl": {
-            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/pl))(#.*)?(\\|.*?)?\\]\\]",
+            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!pl).+]]|]]|#)",
             "flags": "gi",
             "reason": "Link to wrong language (missing /pl)"
         },

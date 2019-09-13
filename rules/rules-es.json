@@ -2,7 +2,7 @@
     "language": "Spanish",
     "rules": {
         "language-links-es": {
-            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/es))(#.*)?(\\|.*?)?\\]\\]",
+            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!es).+]]|]]|#)",
             "flags": "gi",
             "reason": "Link to wrong language (missing /es)"
         },

@@ -2,7 +2,7 @@
     "language": "Finnish",
     "rules": {
         "language-links-fi": {
-            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/fi))(#.*)?(\\|.*?)?\\]\\]",
+            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!fi).+]]|]]|#)",
             "flags": "gi",
             "reason": "Link to wrong language (missing /fi)"
         },

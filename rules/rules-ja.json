@@ -2,7 +2,7 @@
     "language": "Japanese",
     "rules": {
         "language-links-ja": {
-            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/ja))(#.*)?(\\|.*?)?\\]\\]",
+            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!ja).+]]|]]|#)",
             "flags": "gi",
             "reason": "Link to wrong language (missing /ja)"
         },

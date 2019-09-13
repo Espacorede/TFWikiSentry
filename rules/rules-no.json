@@ -2,7 +2,7 @@
     "language": "Norwegian",
     "rules": {
         "language-links-no": {
-            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/no))(#.*)?(\\|.*?)?\\]\\]",
+            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!no).+]]|]]|#)",
             "flags": "gi",
             "reason": "Link to wrong language (missing /no)"
         },

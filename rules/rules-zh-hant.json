@@ -2,7 +2,7 @@
     "language": "Traditional Chinese",
     "rules": {
         "language-links-hant": {
-            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/zh-hant))(#.*)?(\\|.*?)?\\]\\]",
+            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!zh-hant).+]]|]]|#)",
             "flags": "gi",
             "reason": "Link to wrong language (missing /zh-hant)"
         },

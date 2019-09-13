@@ -2,7 +2,7 @@
     "language": "Romanian",
     "rules": {
         "language-links-ro": {
-            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/ro))(#.*)?(\\|.*?)?\\]\\]",
+            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!ro).+]]|]]|#)",
             "flags": "gi",
             "reason": "Link to wrong language (missing /ro)"
         },

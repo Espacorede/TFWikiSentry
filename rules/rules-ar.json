@@ -2,7 +2,7 @@
     "language": "Arabic",
     "rules": {
         "language-links-ar": {
-            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/ar))(#.*)?(\\|.*?)?\\]\\]",
+            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!ar).+]]|]]|#)",
             "flags": "gi",
             "reason": "Link to wrong language (missing /ar)"
         },

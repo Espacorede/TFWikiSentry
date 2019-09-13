@@ -2,7 +2,7 @@
     "language": "Korean",
     "rules": {
         "language-links-ko": {
-            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/ko))(#.*)?(\\|.*?)?\\]\\]",
+            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!ko).+]]|]]|#)",
             "flags": "gi",
             "reason": "Link to wrong language (missing /ko)"
         },

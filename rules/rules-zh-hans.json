@@ -2,7 +2,7 @@
     "language": "Simplified Chinese",
     "rules": {
         "language-links-hans": {
-            "expression": "\\[\\[(?!vdc:|w(?:ikia|ikipedia)?:|file|image|media:)([^\\]|\/]+?(?!\/zh-hans))(#.*)?(\\|.*?)?\\]\\]",
+            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!zh-hans).+]]|]]|#)",
             "flags": "gi",
             "reason": "Link to wrong language (missing /zh-hans)"
         },
