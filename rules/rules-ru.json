@@ -7,7 +7,7 @@
             "reason": "Link to wrong language (missing /ru)"
         },
         "wikipedia-links-ru": {
-            "expression": "\\[\\[w(ikipedia)?:(?!ru:)((.*)|(.*))\\]\\]",
+            "expression": "\\[\\[w(ikipedia)?:(?!ru:)((.*?)|(.*))\\]\\]",
             "flags": "gi",
             "reason": "Link to wrong Wikipedia (missing ru: after w:)"
         }

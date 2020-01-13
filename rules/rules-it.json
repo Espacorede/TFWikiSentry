@@ -7,7 +7,7 @@
             "reason": "Link to wrong language (missing /it)"
         },
         "wikipedia-links-it": {
-            "expression": "\\[\\[w(ikipedia)?:(?!it:)((.*)|(.*))\\]\\]",
+            "expression": "\\[\\[w(ikipedia)?:(?!it:)((.*?)|(.*))\\]\\]",
             "flags": "gi",
             "reason": "Link to wrong Wikipedia (missing it: after w:)"
         }

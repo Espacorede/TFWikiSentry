@@ -7,7 +7,7 @@
             "reason": "Link to wrong language (missing /ar)"
         },
         "wikipedia-links-ar": {
-            "expression": "\\[\\[w(ikipedia)?:(?!ar:)((.*)|(.*))\\]\\]",
+            "expression": "\\[\\[w(ikipedia)?:(?!ar:)((.*?)|(.*))\\]\\]",
             "flags": "gi",
             "reason": "Link to wrong Wikipedia (missing ar: after w:)"
         }

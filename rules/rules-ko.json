@@ -7,7 +7,7 @@
             "reason": "Link to wrong language (missing /ko)"
         },
         "wikipedia-links-ko": {
-            "expression": "\\[\\[w(ikipedia)?:(?!ko:)((.*)|(.*))\\]\\]",
+            "expression": "\\[\\[w(ikipedia)?:(?!ko:)((.*?)|(.*))\\]\\]",
             "flags": "gi",
             "reason": "Link to wrong Wikipedia (missing ko: after w:)"
         }

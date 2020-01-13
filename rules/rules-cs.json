@@ -7,7 +7,7 @@
             "reason": "Link to wrong language (missing /cs)"
         },
         "wikipedia-links-cs": {
-            "expression": "\\[\\[w(ikipedia)?:(?!cs:)((.*)|(.*))\\]\\]",
+            "expression": "\\[\\[w(ikipedia)?:(?!cs:)((.*?)|(.*))\\]\\]",
             "flags": "gi",
             "reason": "Link to wrong Wikipedia (missing cs: after w:)"
         }

@@ -7,7 +7,7 @@
             "reason": "Link to wrong language (missing /ro)"
         },
         "wikipedia-links-ro": {
-            "expression": "\\[\\[w(ikipedia)?:(?!ro:)((.*)|(.*))\\]\\]",
+            "expression": "\\[\\[w(ikipedia)?:(?!ro:)((.*?)|(.*))\\]\\]",
             "flags": "gi",
             "reason": "Link to wrong Wikipedia (missing ro: after w:)"
         }

@@ -7,7 +7,7 @@
             "reason": "Link to wrong language (missing /pt-br)"
         },
         "wikipedia-links-br": {
-            "expression": "\\[\\[w(ikipedia)?:(?!pt:)((.*)|(.*))\\]\\]",
+            "expression": "\\[\\[w(ikipedia)?:(?!pt:)((.*?)|(.*))\\]\\]",
             "flags": "gi",
             "reason": "Link to wrong Wikipedia (missing pt: after w:)"
         },

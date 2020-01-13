@@ -7,7 +7,7 @@
             "reason": "Link to wrong language (missing /hu)"
         },
         "wikipedia-links-hu": {
-            "expression": "\\[\\[w(ikipedia)?:(?!hu:)((.*)|(.*))\\]\\]",
+            "expression": "\\[\\[w(ikipedia)?:(?!hu:)((.*?)|(.*))\\]\\]",
             "flags": "gi",
             "reason": "Link to wrong Wikipedia (missing hu: after w:)"
         }

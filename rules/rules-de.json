@@ -7,7 +7,7 @@
             "reason": "Link to wrong language (missing /de)"
         },
         "wikipedia-links-de": {
-            "expression": "\\[\\[w(ikipedia)?:(?!de:)((.*)|(.*))\\]\\]",
+            "expression": "\\[\\[w(ikipedia)?:(?!de:)((.*?)|(.*))\\]\\]",
             "flags": "gi",
             "reason": "Link to wrong Wikipedia (missing de: after w:)"
         }

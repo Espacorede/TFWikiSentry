@@ -7,7 +7,7 @@
             "reason": "Link to wrong language (missing /nl)"
         },
         "wikipedia-links-nl": {
-            "expression": "\\[\\[w(ikipedia)?:(?!nl:)((.*)|(.*))\\]\\]",
+            "expression": "\\[\\[w(ikipedia)?:(?!nl:)((.*?)|(.*))\\]\\]",
             "flags": "gi",
             "reason": "Link to wrong Wikipedia (missing nl: after w:)"
         }

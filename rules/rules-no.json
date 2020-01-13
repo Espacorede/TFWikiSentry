@@ -7,7 +7,7 @@
             "reason": "Link to wrong language (missing /no)"
         },
         "wikipedia-links-no": {
-            "expression": "\\[\\[w(ikipedia)?:(?!no:)((.*)|(.*))\\]\\]",
+            "expression": "\\[\\[w(ikipedia)?:(?!no:)((.*?)|(.*))\\]\\]",
             "flags": "gi",
             "reason": "Link to wrong Wikipedia (missing no: after w:)"
         }

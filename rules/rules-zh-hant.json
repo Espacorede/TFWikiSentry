@@ -7,7 +7,7 @@
             "reason": "Link to wrong language (missing /zh-hant)"
         },
         "wikipedia-links-hant": {
-            "expression": "\\[\\[w(ikipedia)?:(?!zh:)((.*)|(.*))\\]\\]",
+            "expression": "\\[\\[w(ikipedia)?:(?!zh:)((.*?)|(.*))\\]\\]",
             "flags": "gi",
             "reason": "Link to wrong Wikipedia (missing zh: after w:)"
         }

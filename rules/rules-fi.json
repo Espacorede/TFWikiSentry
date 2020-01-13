@@ -7,7 +7,7 @@
             "reason": "Link to wrong language (missing /fi)"
         },
         "wikipedia-links-fi": {
-            "expression": "\\[\\[w(ikipedia)?:(?!fi:)((.*)|(.*))\\]\\]",
+            "expression": "\\[\\[w(ikipedia)?:(?!fi:)((.*?)|(.*))\\]\\]",
             "flags": "gi",
             "reason": "Link to wrong Wikipedia (missing fi: after w:)"
         }
