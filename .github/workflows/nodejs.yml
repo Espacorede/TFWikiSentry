@@ -14,10 +14,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '10.x'
-      - name: Install web-ext
+      - name: Install web-ext-submit
         run: | 
-         npm install web-ext --global
+         npm install web-ext-submit --global
       - name: Submit to AMO
         run: |
-          web-ext sign --api-key=${{ secrets.AMO_API }} --api-secret=${{ secrets.AMO_SECRET }} --id=${{ secrets.AMO_ID }} --channel=listed --ignore-files manifest_chrome.json README.md
+          web-ext-submit --api-key=${{ secrets.AMO_API }} --api-secret=${{ secrets.AMO_SECRET }} --id=${{ secrets.AMO_ID }} --channel=listed --ignore-files manifest_chrome.json README.md
       
