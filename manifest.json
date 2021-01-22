@@ -33,7 +33,8 @@
     "permissions": [
         "menus",
         "tabs",
-        "storage"
+        "storage",
+        "clipboardWrite"
     ],
     "web_accessible_resources": [
         "images/*.png",
