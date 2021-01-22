@@ -1,4 +1,4 @@
-let bgPort, warningsContainer, feedbackContainer;
+let bgPort, feedbackContainer, tbrowser, warningsContainer;
 const editorTextBox = document.getElementById("wpTextbox1");
 const langExp = /\/([at]r|[ce]s|d[ae]|f[ir]|hu|it|ja|ko|n[lo]|p(?:l|t(?:-br)?)|r[ou]|sv|zh-han[st])/;
 let pageTitle = window.location.pathname.split("/").pop();
@@ -7,7 +7,9 @@ let update = true;
 let lastChange = new Date();
 
 if (chrome) {
-    browser = chrome;
+    tbrowser = chrome;
+} else {
+    tbrowser = browser;
 }
 
 if (pageTitle === "index.php") {
@@ -25,7 +27,7 @@ const languageCode = languageSuffix ? languageSuffix[1] : "en";
 if (editorTextBox && !pageTitle.match("(?:Template(?:(?: |_)?talk)?|Module(?:(?: |_)?talk)?|User(?:(?: |_)?talk)?|Talk|File(?:(?: |_)?talk)?|Help(?:(?: |_)?talk)?|Category(?: |_)talk|Team(?: |_)Fortress(?: |_)Wiki(?:(?: |_)?talk)?):")) {
     createWarnings();
 
-    bgPort = browser.runtime.connect({
+    bgPort = tbrowser.runtime.connect({
         name: "wiki-port"
     });
 
@@ -36,13 +38,12 @@ if (editorTextBox && !pageTitle.match("(?:Template(?:(?: |_)?talk)?|Module(?:(?:
                 addWarning(warning.reason, warning.text, warning.textStartIndex,
                     warning.textEndIndex, warning.lineIndex, warning.lineStartIndex);
             }
-        }
-        else {
+        } else {
             feedbackContainer.innerText = "Nothing of note found in this text.";
         }
     });
 
-    browser.storage.sync.get(null, value => {
+    tbrowser.storage.sync.get(null, value => {
         if (value["manual-check"]) {
             editorTextBox.oninput = onTextboxChange;
             editorTextBox.onfocusout = checkText;

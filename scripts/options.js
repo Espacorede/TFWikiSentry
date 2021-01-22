@@ -1,17 +1,21 @@
+let tbrowser;
+
 if (chrome) {
-    browser = chrome;
+    tbrowser = chrome;
+} else {
+    tbrowser = browser;
 }
 
-const languages = ["ar", "cs", "da", "de", 
+const languages = ["ar", "cs", "da", "de",
     "es", "fi", "fr", "hu",
-    "it", "ja", "ko", "nl", 
+    "it", "ja", "ko", "nl",
     "no", "pl", "pt", "pt-br",
     "ro", "ru", "tr", "zh-hans",
-    "zh-hant" ];
+    "zh-hant"];
 
 let selectedLanguage;
 
-const bgPort = browser.runtime.connect({
+const bgPort = tbrowser.runtime.connect({
     name: "options-port"
 });
 
@@ -37,14 +41,14 @@ function loadJsonFromUrl(url) {
 
 document.addEventListener("DOMContentLoaded", function () {
     // load rules from json
-    const rulesGeneral = browser.runtime.getURL("rules/rules.json");
-    const rulesGeneric = browser.runtime.getURL("rules/rules-language.json");
+    const rulesGeneral = tbrowser.runtime.getURL("rules/rules.json");
+    const rulesGeneric = tbrowser.runtime.getURL("rules/rules-language.json");
 
     loadRules(rulesGeneral, "general-rules");
     loadRules(rulesGeneric, "generic-rules");
-    let languagePromise = loadRules(browser.runtime.getURL("rules/rules-en.json"), "en");
+    let languagePromise = loadRules(tbrowser.runtime.getURL("rules/rules-en.json"), "en");
     for (const lang of languages) {
-        const rulesLanguage = browser.runtime.getURL(`rules/rules-${lang}.json`);
+        const rulesLanguage = tbrowser.runtime.getURL(`rules/rules-${lang}.json`);
         languagePromise = languagePromise.then(loadRules(rulesLanguage, lang));
     }
 
@@ -65,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Load current settings
         loadOptions();
         loadLanguageOptions();
-        getBrowserLanguage();
+        gettbrowserLanguage();
     });
 });
 
@@ -126,7 +130,7 @@ function createRuleOption(name, rule) {
 }
 
 if (chrome) {
-    browser = chrome;
+    tbrowser = chrome;
 }
 
 function saveOptions() {
@@ -139,7 +143,7 @@ function saveOptions() {
         options[checkbox.id] = checkbox.checked;
     }
 
-    browser.storage.sync.set(options, function () {
+    tbrowser.storage.sync.set(options, function () {
         document.getElementById("note").innerText = "Settings saved, yo.";
         document.getElementById("note").className = "success";
     }).then(() => {
@@ -151,7 +155,7 @@ function saveOptions() {
 
 function loadLanguageOptions() {
     const lang = document.getElementById("language-select").value;
-    browser.storage.sync.set({
+    tbrowser.storage.sync.set({
         "options-language": lang
     });
     if (lang) {
@@ -163,9 +167,9 @@ function loadLanguageOptions() {
     }
 }
 
-function getBrowserLanguage() {
-    const browserLanguage = selectedLanguage || navigator.language;
-    const lowercaseLanguage = browserLanguage.toLowerCase();
+function gettbrowserLanguage() {
+    const tbrowserLanguage = selectedLanguage || navigator.language;
+    const lowercaseLanguage = tbrowserLanguage.toLowerCase();
     const select = document.getElementById("language-select");
     let wikiLanguage;
 
@@ -188,7 +192,7 @@ function getBrowserLanguage() {
 }
 
 function loadOptions() {
-    browser.storage.sync.get(null, function (saved) {
+    tbrowser.storage.sync.get(null, function (saved) {
         if (saved) {
             selectedLanguage = saved["options-language"];
             const checkBoxes = document.querySelectorAll("input");
