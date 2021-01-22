@@ -22,7 +22,7 @@ if (pageTitle === "index.php") {
 const languageSuffix = langExp.exec(pageTitle);
 const languageCode = languageSuffix ? languageSuffix[1] : "en";
 
-if (editorTextBox && !pageTitle.includes("Template:") && !pageTitle.includes("User:") && !pageTitle.includes("Talk:")) {
+if (editorTextBox && !pageTitle.match("(?:Template(?:(?: |_)?talk)?|Module(?:(?: |_)?talk)?|User(?:(?: |_)?talk)?|Talk|File(?:(?: |_)?talk)?|Help(?:(?: |_)?talk)?|Category(?: |_)talk|Team(?: |_)Fortress(?: |_)Wiki(?:(?: |_)?talk)?):")) {
     createWarnings();
 
     bgPort = browser.runtime.connect({
