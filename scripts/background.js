@@ -1,17 +1,19 @@
-let expressions, languageExpressions, menus, options, translationExpressions;
+let expressions, languageExpressions, menus, options, tbrowser, translationExpressions;
 
-const languages = ["en", "ar", "cs", "da", 
-    "de", "es", "fi", "fr", 
+const languages = [
+    "en", "ar", "cs", "da",
+    "de", "es", "fi", "fr",
     "hu", "it", "ja", "ko",
-    "nl", "no", "pl", "pt", 
-    "pt-br","ro", "ru", "tr", 
-    "zh-hans", "zh-hant" ];
+    "nl", "no", "pl", "pt",
+    "pt-br", "ro", "ru", "tr",
+    "zh-hans", "zh-hant"];
 
 if (chrome) {
-    browser = chrome;
-    menus = browser.contextMenus;
+    tbrowser = chrome;
+    menus = tbrowser.contextMenus;
 } else {
-    menus = browser.menus;
+    tbrowser = browser;
+    menus = tbrowser.menus;
 }
 
 function setOptions() {
@@ -40,11 +42,11 @@ function connectPort(port) {
     }
 }
 
-browser.runtime.onConnect.addListener(connectPort);
+tbrowser.runtime.onConnect.addListener(connectPort);
 
 function loadOptions() {
     return new Promise((resolve) => {
-        browser.storage.sync.get(null, value => {
+        tbrowser.storage.sync.get(null, value => {
             resolve(value);
         });
     });
@@ -59,8 +61,8 @@ function initializeExpressions() {
 }
 
 function loadExpressions() {
-    const rulesGeneral = browser.runtime.getURL("rules/rules.json");
-    const rulesGeneric = browser.runtime.getURL("rules/rules-language.json");
+    const rulesGeneral = tbrowser.runtime.getURL("rules/rules.json");
+    const rulesGeneric = tbrowser.runtime.getURL("rules/rules-language.json");
 
     loadJsonFromUrl(rulesGeneral).then((json, err) => {
         if (err) {
@@ -76,7 +78,7 @@ function loadExpressions() {
     });
 
     for (const lang of languages) {
-        const rulesLanguage = browser.runtime.getURL(`rules/rules-${lang}.json`);
+        const rulesLanguage = tbrowser.runtime.getURL(`rules/rules-${lang}.json`);
         loadJsonFromUrl(rulesLanguage).then((json, err) => {
             if (err) {
                 throw err;
@@ -192,13 +194,13 @@ function executeExpression(expression, text) {
 }
 
 
-browser.tabs.onActivated.addListener(async (tab) => {
-    if (browser.contextMenus) {
-        menus = browser.contextMenus;
+tbrowser.tabs.onActivated.addListener(async (tab) => {
+    if (tbrowser.contextMenus) {
+        menus = tbrowser.contextMenus;
     } else {
-        menus = browser.menus;
+        menus = tbrowser.menus;
     }
-    await browser.tabs.get(tab.tabId, async (tabInfo) => {
+    await tbrowser.tabs.get(tab.tabId, async (tabInfo) => {
         if (tabInfo.url.startsWith("https://wiki.teamfortress.com")) {
             menus.removeAll(function () {
                 menus.create({
