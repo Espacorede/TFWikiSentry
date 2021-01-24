@@ -19,5 +19,5 @@ jobs:
          npm install web-ext-submit --global
       - name: Submit to AMO
         run: |
-          web-ext-submit --api-key=${{ secrets.AMO_API }} --api-secret=${{ secrets.AMO_SECRET }} --id=${{ secrets.AMO_ID }} --channel=listed --ignore-files manifest_chrome.json README.md
+          web-ext-submit --api-key=${{ secrets.AMO_API }} --api-secret=${{ secrets.AMO_SECRET }} --channel=listed --ignore-files manifest_chrome.json README.md
       
