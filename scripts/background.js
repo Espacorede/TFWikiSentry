@@ -152,11 +152,11 @@ function executeExpressions(text, lang) {
 function executeExpression(expression, text, lang) {
     let ex, exReason;
     if (lang) {
-        ex = expression.expression.replace("sentry_lang", lang)
-        exReason = expression.reason.replace("sentry_lang", lang)
+        ex = expression.expression.replace("sentry_lang", lang);
+        exReason = expression.reason.replace("sentry_lang", lang);
     } else {
-        ex = expression.expression
-        exReason = expression.reason
+        ex = expression.expression;
+        exReason = expression.reason;
     }
     const lines = text.split("\n").map((line) => line.length + 1);
     const exp = new RegExp(ex, expression.flags);
