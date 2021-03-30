@@ -42,10 +42,8 @@ function loadJsonFromUrl(url) {
 document.addEventListener("DOMContentLoaded", function () {
     // load rules from json
     const rulesGeneral = tbrowser.runtime.getURL("rules/rules.json");
-    const rulesGeneric = tbrowser.runtime.getURL("rules/rules-language.json");
 
     loadRules(rulesGeneral, "general-rules");
-    loadRules(rulesGeneric, "generic-rules");
     let languagePromise = loadRules(tbrowser.runtime.getURL("rules/rules-en.json"), "en");
     for (const lang of languages) {
         const rulesLanguage = tbrowser.runtime.getURL(`rules/rules-${lang}.json`);

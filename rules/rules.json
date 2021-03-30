@@ -3,17 +3,26 @@
         "capitalized-class": {
             "expression": "\\b(scouts?|soldiers?|pyros?|heavy weapons guys?|heavies|demom(an|en)|engineers?|medics?|snipers?|sp(y|ies))\\b",
             "flags": "g",
-            "reason": "Class name not capitalized"
+            "reason": "Class name not capitalized",
+            "language": false
         },
         "legacy-image-namespace": {
             "expression": "(^>)?\\[?\\[?image:[^.]+\\.[a-z]+",
             "flags": "gim",
-            "reason": "Using legacy file namespace (Image: should be replaced by File:)"
+            "reason": "Using legacy file namespace (Image: should be replaced by File:)",
+            "language": false
         },
         "legacy-wikipedia": {
             "expression": "{{w\\|.*}}",
             "flags": "gi",
-            "reason": "Deprecated 'w' template (use [[w:article|name]] instead)"
+            "reason": "Deprecated 'w' template (use [[w:article|name]] instead)",
+            "language": false
+        },
+        "language-links-language": {
+            "expression": "\\[\\[(?![vV][dD][cC]:|:?[fF][iI][lL][eE]:|[wW]([iI][kK][iI][aA]|[iI][kK][iI][pP][eE][dD][iI][aA])?:|#|:?[iI][mM][aA][gG][eE]:|[mM][eE][dD][iI][aA]:)([^/]+?)(\\/(?!sentry_lang).+]]|]]|#)",
+            "flags": "g",
+            "reason": "Link to wrong language (missing /sentry_lang)",
+            "language": true
         }
     }
 }

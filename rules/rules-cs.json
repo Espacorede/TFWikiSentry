@@ -1,11 +1,6 @@
 {
     "language": "Czech",
     "rules": {
-        "language-links-cs": {
-            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!cs).+]]|]]|#)",
-            "flags": "gi",
-            "reason": "Link to wrong language (missing /cs)"
-        },
         "wikipedia-links-cs": {
             "expression": "\\[\\[w(ikipedia)?:(?!cs:)((.*?)|(.*))\\]\\]",
             "flags": "gi",

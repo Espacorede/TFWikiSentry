@@ -59,7 +59,7 @@ if (editorTextBox && !pageTitle.match("(?:Template(?:(?: |_)?talk)?|Module(?:(?:
         }
     });
 
-    console.log("WikiSentry loaded");
+    console.log("tf-wiki-sentry - WikiSentry loaded");
 }
 
 function createWarnings() {

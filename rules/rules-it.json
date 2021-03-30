@@ -1,11 +1,6 @@
 {
     "language": "Italian",
     "rules": {
-        "language-links-it": {
-            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!it).+]]|]]|#)",
-            "flags": "gi",
-            "reason": "Link to wrong language (missing /it)"
-        },
         "wikipedia-links-it": {
             "expression": "\\[\\[w(ikipedia)?:(?!it:)((.*?)|(.*))\\]\\]",
             "flags": "gi",
