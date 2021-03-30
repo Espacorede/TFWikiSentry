@@ -1,11 +1,6 @@
 {
     "language": "Polish",
     "rules": {
-        "language-links-pl": {
-            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!pl).+]]|]]|#)",
-            "flags": "gi",
-            "reason": "Link to wrong language (missing /pl)"
-        },
         "wikipedia-links-pl": {
             "expression": "\\[\\[w(ikipedia)?:(?!pl:)((.*?)|(.*))\\]\\]",
             "flags": "gi",

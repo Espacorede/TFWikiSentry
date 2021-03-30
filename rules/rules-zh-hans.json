@@ -1,11 +1,6 @@
 {
     "language": "Simplified Chinese",
     "rules": {
-        "language-links-hans": {
-            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!zh-hans).+]]|]]|#)",
-            "flags": "gi",
-            "reason": "Link to wrong language (missing /zh-hans)"
-        },
         "wikipedia-links-hans": {
             "expression": "\\[\\[w(ikipedia)?:(?!zh:)((.*?)|(.*))\\]\\]",
             "flags": "gi",

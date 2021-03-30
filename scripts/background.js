@@ -1,4 +1,4 @@
-let expressions, languageExpressions, menus, options, tbrowser, translationExpressions;
+let expressions, languageExpressions, menus, options, tbrowser;
 
 const languages = [
     "en", "ar", "cs", "da",
@@ -54,7 +54,6 @@ function loadOptions() {
 
 function initializeExpressions() {
     expressions = [];
-    translationExpressions = [];
     languageExpressions = {};
 
     loadExpressions();
@@ -62,19 +61,12 @@ function initializeExpressions() {
 
 function loadExpressions() {
     const rulesGeneral = tbrowser.runtime.getURL("rules/rules.json");
-    const rulesGeneric = tbrowser.runtime.getURL("rules/rules-language.json");
 
     loadJsonFromUrl(rulesGeneral).then((json, err) => {
         if (err) {
             throw err;
         }
         expressions = getActiveRules(json);
-    });
-    loadJsonFromUrl(rulesGeneric).then((json, err) => {
-        if (err) {
-            throw err;
-        }
-        translationExpressions = getActiveRules(json);
     });
 
     for (const lang of languages) {
@@ -130,10 +122,9 @@ function executeExpressions(text, lang) {
     const warnings = [];
 
     for (const expression of expressions) {
-        warnings.push(...executeExpression(expression, text));
-    }
-    if (lang !== "en") {
-        for (const expression of translationExpressions) {
+        if (expression.language) {
+            warnings.push(...executeExpression(expression, text, lang));
+        } else {
             warnings.push(...executeExpression(expression, text));
         }
     }
@@ -158,10 +149,17 @@ function executeExpressions(text, lang) {
     return warnings;
 }
 
-function executeExpression(expression, text) {
+function executeExpression(expression, text, lang) {
+    let ex, exReason;
+    if (lang) {
+        ex = expression.expression.replace("sentry_lang", lang)
+        exReason = expression.reason.replace("sentry_lang", lang)
+    } else {
+        ex = expression.expression
+        exReason = expression.reason
+    }
     const lines = text.split("\n").map((line) => line.length + 1);
-
-    const exp = new RegExp(expression.expression, expression.flags);
+    const exp = new RegExp(ex, expression.flags);
     let match = exp.exec(text);
     const warnings = [];
 
@@ -180,7 +178,7 @@ function executeExpression(expression, text) {
         const lineCharacterIndex = startIndex - lineCharacterSum;
 
         warnings.push({
-            reason: expression.reason,
+            reason: exReason,
             text: match[0],
             textStartIndex: startIndex,
             textEndIndex: endIndex,

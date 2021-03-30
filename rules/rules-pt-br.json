@@ -1,11 +1,6 @@
 {
     "language": "Brazilian Portuguese",
     "rules": {
-        "language-links-br": {
-            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!pt-br).+]]|]]|#)",
-            "flags": "gi",
-            "reason": "Link to wrong language (missing /pt-br)"
-        },
         "wikipedia-links-br": {
             "expression": "\\[\\[w(ikipedia)?:(?!pt:)((.*?)|(.*))\\]\\]",
             "flags": "gi",

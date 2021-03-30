@@ -1,11 +1,6 @@
 {
     "language": "Japanese",
     "rules": {
-        "language-links-ja": {
-            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!ja).+]]|]]|#)",
-            "flags": "gi",
-            "reason": "Link to wrong language (missing /ja)"
-        },
         "wikipedia-links-ja": {
             "expression": "\\[\\[w(ikipedia)?:(?!ja:)((.*?)|(.*))\\]\\]",
             "flags": "gi",

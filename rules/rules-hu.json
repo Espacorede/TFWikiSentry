@@ -1,11 +1,6 @@
 {
     "language": "Hungarian",
     "rules": {
-        "language-links-hu": {
-            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!hu).+]]|]]|#)",
-            "flags": "gi",
-            "reason": "Link to wrong language (missing /hu)"
-        },
         "wikipedia-links-hu": {
             "expression": "\\[\\[w(ikipedia)?:(?!hu:)((.*?)|(.*))\\]\\]",
             "flags": "gi",

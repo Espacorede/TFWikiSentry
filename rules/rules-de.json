@@ -1,11 +1,6 @@
 {
     "language": "German",
     "rules": {
-        "language-links-de": {
-            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!de).+]]|]]|#)",
-            "flags": "gi",
-            "reason": "Link to wrong language (missing /de)"
-        },
         "wikipedia-links-de": {
             "expression": "\\[\\[w(ikipedia)?:(?!de:)((.*?)|(.*))\\]\\]",
             "flags": "gi",

@@ -1,11 +1,6 @@
 {
     "language": "Turkish",
     "rules": {
-        "language-links-tr": {
-            "expression": "\\[\\[(?!vdc:|:?file:|w(ikia|ikipedia)?:|#|:?image:|media:)([^/]+?)(\\/(?!tr).+]]|]]|#)",
-            "flags": "gi",
-            "reason": "Link to wrong language (missing /tr)"
-        },
         "wikipedia-links-tr": {
             "expression": "\\[\\[w(ikipedia)?:(?!tr:)((.*?)|(.*))\\]\\]",
             "flags": "gi",
