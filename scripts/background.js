@@ -123,7 +123,9 @@ function executeExpressions(text, lang) {
 
     for (const expression of expressions) {
         if (expression.language) {
-            warnings.push(...executeExpression(expression, text, lang));
+            if (lang !== "en") {
+                warnings.push(...executeExpression(expression, text, lang));
+            }
         } else {
             warnings.push(...executeExpression(expression, text));
         }
