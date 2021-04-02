@@ -33,7 +33,8 @@
     "permissions": [
         "contextMenus",
         "tabs",
-        "storage"
+        "storage",
+        "*://raw.githubusercontent.com/"
     ],
     "web_accessible_resources": [
         "images/*.png",

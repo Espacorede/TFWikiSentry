@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const select = document.getElementById("language-select");
         select.onchange = loadLanguageOptions;
 
-        // "Save settings" button'
+        // "Save settings" button
         document.getElementById("save").addEventListener("click", function () {
             saveOptions();
         });
