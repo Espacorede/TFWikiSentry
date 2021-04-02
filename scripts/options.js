@@ -41,12 +41,12 @@ function loadJsonFromUrl(url) {
 
 document.addEventListener("DOMContentLoaded", function () {
     // load rules from json
-    const rulesGeneral = tbrowser.runtime.getURL("rules/rules.json");
+    const rulesGeneral = "https://raw.githubusercontent.com/Espacorede/TFWikiSentry/rules/rules/rules.json";
 
     loadRules(rulesGeneral, "general-rules");
-    let languagePromise = loadRules(tbrowser.runtime.getURL("rules/rules-en.json"), "en");
+    let languagePromise = loadRules("https://raw.githubusercontent.com/Espacorede/TFWikiSentry/rules/rules/rules-en.json", "en");
     for (const lang of languages) {
-        const rulesLanguage = tbrowser.runtime.getURL(`rules/rules-${lang}.json`);
+        const rulesLanguage = `https://raw.githubusercontent.com/Espacorede/TFWikiSentry/rules/rules/rules-${lang}.json`;
         languagePromise = languagePromise.then(loadRules(rulesLanguage, lang));
     }
 
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const select = document.getElementById("language-select");
         select.onchange = loadLanguageOptions;
 
-        // "Save settings" button
+        // "Save settings" button'
         document.getElementById("save").addEventListener("click", function () {
             saveOptions();
         });

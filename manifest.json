@@ -34,7 +34,8 @@
         "menus",
         "tabs",
         "storage",
-        "clipboardWrite"
+        "clipboardWrite",
+        "*://raw.githubusercontent.com/"
     ],
     "web_accessible_resources": [
         "images/*.png",
