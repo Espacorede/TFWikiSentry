@@ -41,12 +41,12 @@ function loadJsonFromUrl(url) {
 
 document.addEventListener("DOMContentLoaded", function () {
     // load rules from json
-    const rulesGeneral = "https://raw.githubusercontent.com/Espacorede/TFWikiSentry/rules/rules/rules.json";
+    const rulesGeneral = "https://raw.githubusercontent.com/Espacorede/TFWikiSentry/rules/rules.json";
 
     loadRules(rulesGeneral, "general-rules");
-    let languagePromise = loadRules("https://raw.githubusercontent.com/Espacorede/TFWikiSentry/rules/rules/rules-en.json", "en");
+    let languagePromise = loadRules("https://raw.githubusercontent.com/Espacorede/TFWikiSentry/rules/rules-en.json", "en");
     for (const lang of languages) {
-        const rulesLanguage = `https://raw.githubusercontent.com/Espacorede/TFWikiSentry/rules/rules/rules-${lang}.json`;
+        const rulesLanguage = `https://raw.githubusercontent.com/Espacorede/TFWikiSentry/rules/rules-${lang}.json`;
         languagePromise = languagePromise.then(loadRules(rulesLanguage, lang));
     }
 

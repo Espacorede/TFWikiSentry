@@ -60,7 +60,7 @@ function initializeExpressions() {
 }
 
 function loadExpressions() {
-    const rulesGeneral = "https://raw.githubusercontent.com/Espacorede/TFWikiSentry/rules/rules/rules.json";
+    const rulesGeneral = "https://raw.githubusercontent.com/Espacorede/TFWikiSentry/rules/rules.json";
 
     loadJsonFromUrl(rulesGeneral).then((json, err) => {
         if (err) {
@@ -70,7 +70,7 @@ function loadExpressions() {
     });
 
     for (const lang of languages) {
-        const rulesLanguage = `https://raw.githubusercontent.com/Espacorede/TFWikiSentry/rules/rules/rules-${lang}.json`;
+        const rulesLanguage = `https://raw.githubusercontent.com/Espacorede/TFWikiSentry/rules/rules-${lang}.json`;
         loadJsonFromUrl(rulesLanguage).then((json, err) => {
             if (err) {
                 throw err;
