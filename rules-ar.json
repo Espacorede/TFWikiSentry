@@ -1,0 +1,10 @@
+{
+    "language": "Arabic",
+    "rules": {
+        "wikipedia-links-ar": {
+            "expression": "\\[\\[w(ikipedia)?:(?!ar:)((.*?)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing ar: after w:)"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "language": "Spanish",
+    "rules": {
+        "wikipedia-links-es": {
+            "expression": "\\[\\[w(ikipedia)?:(?!es:)((.*?)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing es: after w:)"
+        }
+    }
+}

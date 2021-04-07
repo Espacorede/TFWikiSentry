@@ -1,0 +1,10 @@
+{
+    "language": "Traditional Chinese",
+    "rules": {
+        "wikipedia-links-hant": {
+            "expression": "\\[\\[w(ikipedia)?:(?!zh:)((.*?)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing zh: after w:)"
+        }
+    }
+}

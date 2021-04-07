@@ -1,0 +1,10 @@
+{
+    "language": "Simplified Chinese",
+    "rules": {
+        "wikipedia-links-hans": {
+            "expression": "\\[\\[w(ikipedia)?:(?!zh:)((.*?)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing zh: after w:)"
+        }
+    }
+}

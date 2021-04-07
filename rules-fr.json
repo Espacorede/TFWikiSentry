@@ -1,0 +1,10 @@
+{
+    "language": "French",
+    "rules": {
+        "wikipedia-links-fr": {
+            "expression": "\\[\\[w(ikipedia)?:(?!fr:)((.*?)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing fr: after w:)"
+        }
+    }
+}

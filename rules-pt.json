@@ -1,0 +1,10 @@
+{
+    "language": "Portuguese",
+    "rules": {
+        "wikipedia-links-pt": {
+            "expression": "\\[\\[w(ikipedia)?:(?!pt:)((.*?)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing pt: after w:)"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "language": "Italian",
+    "rules": {
+        "wikipedia-links-it": {
+            "expression": "\\[\\[w(ikipedia)?:(?!it:)((.*?)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing it: after w:)"
+        }
+    }
+}

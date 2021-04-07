@@ -1,0 +1,10 @@
+{
+    "language": "Romanian",
+    "rules": {
+        "wikipedia-links-ro": {
+            "expression": "\\[\\[w(ikipedia)?:(?!ro:)((.*?)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing ro: after w:)"
+        }
+    }
+}

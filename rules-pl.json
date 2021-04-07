@@ -1,0 +1,10 @@
+{
+    "language": "Polish",
+    "rules": {
+        "wikipedia-links-pl": {
+            "expression": "\\[\\[w(ikipedia)?:(?!pl:)((.*?)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing pl: after w:)"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "language": "Turkish",
+    "rules": {
+        "wikipedia-links-tr": {
+            "expression": "\\[\\[w(ikipedia)?:(?!tr:)((.*?)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing tr: after w:)"
+        }
+    }
+}

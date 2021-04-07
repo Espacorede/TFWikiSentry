@@ -1,0 +1,10 @@
+{
+    "language": "German",
+    "rules": {
+        "wikipedia-links-de": {
+            "expression": "\\[\\[w(ikipedia)?:(?!de:)((.*?)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing de: after w:)"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "language": "Finnish",
+    "rules": {
+        "wikipedia-links-fi": {
+            "expression": "\\[\\[w(ikipedia)?:(?!fi:)((.*?)|(.*))\\]\\]",
+            "flags": "gi",
+            "reason": "Link to wrong Wikipedia (missing fi: after w:)"
+        }
+    }
+}
