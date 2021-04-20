@@ -1,11 +1,11 @@
 {
     "manifest_version": 2,
-    "version": "1.2.0",
+    "version": "1.2.1",
     "name": "TF Wiki Sentry",
     "short_name": "TFWSentry",
     "homepage_url": "https://github.com/espacorede/tfwikisentry",
     "author": "Espacorede Team",
-    "description": "Enhance your Team Fortress Wiki editing experience! Hopefully.",
+    "description": "Enhance your Team Fortress Wiki editing experience!",
     "icons": {
         "48": "images/icons/icon-48x48.png",
         "72": "images/icons/icon-72x72.png",
