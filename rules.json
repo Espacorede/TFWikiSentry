@@ -19,7 +19,7 @@
             "language": false
         },
         "language-links-language": {
-            "expression": "\\[\\[(?![vV][dD][cC]:|:?[fF][iI][lL][eE]:|[wW]([iI][kK][iI][aA]|[iI][kK][iI][pP][eE][dD][iI][aA])?:|#|:?[iI][mM][aA][gG][eE]:|[mM][eE][dD][iI][aA]:)([^/{}]+?)(\\/(?!sentry_lang).+]]|]]|#)",
+            "expression": "\\[\\[(?![vV][dD][cC]:|steamworks(api|doc):|:?[fF][iI][lL][eE]:|[wW]([iI][kK][iI][aA]|[iI][kK][iI][pP][eE][dD][iI][aA])?:|#|:?[iI][mM][aA][gG][eE]:|[mM][eE][dD][iI][aA]:)([^/{}]+?)(\\/(?!sentry_lang).+]]|]]|#)",
             "flags": "g",
             "reason": "Link to wrong language (missing /sentry_lang)",
             "language": true
